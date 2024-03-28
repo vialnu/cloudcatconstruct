@@ -1,0 +1,354 @@
+/* общие параметры */
+@font-face {
+  font-family: "RubikBubbles";
+  src: url("../fonts/RubikBubbles-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* общие параметры */
+*{
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+html {
+  background-color: #D7D1FF;
+  transition: all .6s ease;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  cursor: url('../image/cat.svg'), auto;
+}
+
+html:active {
+  cursor: url('../image/catactive.svg'), auto;
+}
+
+html:pointer {
+  cursor: url('../image/catactive.svg'), auto;
+}
+
+/* логотипчек */
+.logodisplay {
+  position: absolute;
+  width: 20vw;
+  margin-top: 2vw;
+}
+
+/* кнопочка */
+button {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  background-color: none ;
+  background-position: center;
+  transition-duration: 0.4s;
+  border: none;
+}
+
+#button1 {
+  background-size: 10vw 10vw;
+  cursor: url("../image/catactive.svg"), auto;
+  background-image: url("../image/лапа кнопка.jpg");
+  margin: 34vw auto;
+}
+/* кнопка назад секция2 */
+#button2 {
+  height: 5vw;
+  width: 5vw;
+  margin-top: 0;
+  margin-left: 0;
+  background-size: 5vw 5vw;
+  cursor: url("../image/catactive.svg"), auto;
+  background-image: url("../image/кнопка назад.png");
+}
+
+#page1 {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#page2 {
+  display: flex;
+  padding: 1vw;
+  width: 100vw;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+/* приветствие */
+.text1 {
+  width: 30vw;
+  margin-top: 18vw;
+  font-family: "RubikBubbles";
+  text-align: center;
+  font-size: 2vw;
+  color: #ADA0FF;
+  -webkit-text-stroke: 2px #000;
+}
+
+/* облачки с главного экрана */
+.cloud1 {
+  width: 33.4vw;
+  height: 30.2vw;
+  position: absolute;
+  right: 68vw;
+  top: -3vw;
+}
+
+.cloud2 {
+  width: 42.9vw;
+  height: 45.5vw;
+  position: absolute;
+  right: 65vw;
+  top: 6vw;
+}
+
+.cloud3 {
+  width: 37.8vw;
+  height: 37.8vw;
+  position: absolute;
+  right: 67vw;
+  top: 19vw;
+}
+
+.cloud4 {
+  width: 35.2vw;
+  height: 35.2vw;
+  position: absolute;
+  left: 67vw;
+  top: -1vw;
+}
+
+.cloud5 {
+  width: 33vw;
+  height: 24vw;
+  position: absolute;
+  left: 75vw;
+  top: 14vw;
+}
+
+.cloud6 {
+  width: 39vw;
+  height: 30vw;
+  position: absolute;
+  left: 72vw;
+  top: 27vw;
+}
+
+/* таблица */
+
+.ten {
+  position: absolute;
+  top: 22vw
+}
+
+.cloud {
+  width: 35vw;
+  height: 25vw;
+}
+
+.cloudwhite1 {
+  position: absolute;
+}
+
+.cloudEditor {
+  top: 8vw;
+  width: 90vw;
+  height: 35vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0vw auto;
+}
+
+.lineOfButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 60vw;
+  height: 8vw;
+  padding: 1vw;
+  margin-top: 6vw;
+  background-color: #ADA0FF;
+  border-radius: 2vw;
+  padding: 1vw;
+
+}
+
+.buttonStyleContainer{
+  justify-content: center;
+  margin-top: -0.25vw;
+  border-radius: 20%;
+  width: 7vw;
+  height: 7vw;
+}
+
+#editWindow {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cloud {
+  background-image: url("../constructor/shape1White.png");
+  background-size: 100% 150%;
+  background-position: 0vw -7vw;
+  width: 42vw;
+  height: 30vw;
+  margin-top: -2vw;
+
+}
+
+.eyes {
+  background-image: url("../constructor/eyes1.png");
+  background-size: 100% 100%;
+  background-position: 0vw 0vw;
+  width: 9vw;
+  height: 9vw;
+  position: absolute;
+  top: 7vw
+}
+
+.horns {
+  background-image: url("../constructor/horns1.png");
+  background-size: 100% 100%;
+  background-position: 0vw 0vw;
+  width: 18vw;
+  height: 5vw;
+  position: absolute;
+  top: 14vw
+}
+
+.ears {
+  background-image: url("../constructor/ears1.png");
+  background-size: 100% 100%;
+  background-position: 0vw 0vw;
+  width: 13vw;
+  height: 8vw;
+  position: absolute;
+  top: 1vw
+}
+
+
+.stiker {
+  margin-top: -48.7vw;
+  margin-left: 88vw;
+}
+
+#paint {
+  display: none;
+  position: absolute;
+  z-index: 1111111;
+  background-color: #ADA0FF;
+  width: 15vw;
+  height: 30vw;
+  border-radius: 2vw;
+  top: 2vw;
+  right: 2vw;
+}
+
+#stikery {
+ position: relative;
+ display: block;
+ width: 10%;
+ height: 70%;
+ background: #ADA0FF;
+ border-radius: 45px;
+ margin-top: -45%;
+ margin-left: 5%;
+ padding: 20px;
+ }
+
+.stik1 {
+  width: 3.7vw;
+  height: 3.3vw;
+}
+
+.stik2 {
+  width: 2.6vw;
+  height: 2.6vw;
+}
+
+.stik3 {
+  width: 4.1vw;
+  height: 4.6vw;
+}
+
+.stik4 {
+  width: 3.8vw;
+  height: 3.8vw;
+}
+
+.stik5 {
+  width: 8.5vw;
+  height: 5.5vw;
+}
+
+.stik6 {
+  width: 5.2vw;
+  height: 3.4vw;
+}
+
+.stik7 {
+  width: 4.1vw;
+  height: 3.7vw;
+}
+
+.stik8 {
+  width: 3.8vw;
+  height: 3.8vw;
+}
+
+.stik9 {
+  width: 6.2vw;
+  height: 3vw;
+}
+
+.stik10 {
+  width: 4vw;
+  height: 4vw;
+}
+
+.stik11 {
+  width: 3vw;
+  height: 4vw;
+}
+
+.stik12 {
+  width: 3vw;
+  height: 3vw;
+}
+
+.stik9 {
+  width: 3vw;
+  height: 3vw;
+}
+
+
+#button3 {
+  width: 10vw;
+  height: 5vw;
+  margin-top: -49vw;
+  margin-left: 88vw;
+  position: relative;
+  display: block;
+  background: #ADA0FF;
+  border-radius: 30px;
+}
+
+#button3 {
+  z-index: 33333;
+  margin-top: 0;
+  position: absolute;
+  font-family: "RubikBubbles";
+  text-align: center;
+  font-size: 2vw;
+}
